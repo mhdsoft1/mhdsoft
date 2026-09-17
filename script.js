@@ -44,7 +44,7 @@ backToTop.addEventListener('click', () => {
 
 const typedWord = document.getElementById('typedWord');
 if (typedWord) {
-  const words = ['Software', 'ERP', 'AI', 'Robotics', 'IoT'];
+  const words = ['Software', 'ERP', 'SaaS', 'AI', 'Robotics', 'IoT'];
   let wi = 0;
   setInterval(() => {
     wi = (wi + 1) % words.length;
