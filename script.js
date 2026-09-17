@@ -2,6 +2,16 @@ const CONTACT_EMAIL = 'mhdglobalventures@gmail.com';
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('mhdsoft-theme', next); } catch (e) {}
+  });
+}
+
 const TECH_STACK = [
   { name: 'Odoo', bg: '#714B67', icon: '<circle cx="12" cy="12" r="7" fill="none" stroke="#fff" stroke-width="2"/>' },
   { name: 'Python', bg: '#3776AB', icon: '<path d="M8 4h5a3 3 0 0 1 3 3v2H9a3 3 0 0 0-3 3v2H4a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h4z" fill="#FFD43B" transform="translate(1 0) scale(0.72)"/><path d="M16 20h-5a3 3 0 0 1-3-3v-2h7a3 3 0 0 0 3-3V10h2a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3h-4z" fill="#fff" transform="translate(1 0) scale(0.72)"/>' },
@@ -89,6 +99,36 @@ if (processFill && firstStep) {
     });
   }, { threshold: 0.3 });
   stepObserver.observe(firstStep);
+}
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!prefersReducedMotion) {
+  document.querySelectorAll('.case-thumb').forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const r = el.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      el.style.transform = `perspective(1200px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) scale(1.01)`;
+    });
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = '';
+    });
+  });
+
+  const heroArt = document.getElementById('heroArt');
+  const heroArt3d = document.getElementById('heroArt3d');
+  if (heroArt && heroArt3d) {
+    heroArt.addEventListener('mousemove', (e) => {
+      const r = heroArt.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      heroArt3d.style.transform = `rotateY(${x * 14}deg) rotateX(${-y * 14}deg)`;
+    });
+    heroArt.addEventListener('mouseleave', () => {
+      heroArt3d.style.transform = '';
+    });
+  }
 }
 
 const contactForm = document.getElementById('contactForm');
