@@ -264,6 +264,20 @@ section{padding:110px 0;}
 .arch-primary{border-color:var(--accent);background:rgba(34,211,238,0.08);}
 .arch-badge{position:absolute;top:-12px;right:20px;background:var(--accent);color:#032e35;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:5px 12px;border-radius:20px;}
 
+/* COMPARE */
+.compare-table{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:#fff;}
+.compare-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;}
+.compare-row:not(:last-child){border-bottom:1px solid var(--border);}
+.compare-cell{padding:18px 22px;font-size:14px;display:flex;align-items:center;gap:10px;}
+.compare-label{font-weight:600;color:var(--dark);font-size:14.5px;}
+.compare-head{background:#F8FAFC;}
+.compare-col-other{color:var(--text-muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.5px;}
+.compare-col-us{color:var(--primary);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.5px;}
+.compare-other{color:var(--text-muted);}
+.compare-other svg{width:16px;height:16px;stroke:#CBD5E1;flex-shrink:0;}
+.compare-us{color:var(--dark);font-weight:500;background:#F5F3FF;}
+.compare-us svg{width:16px;height:16px;stroke:var(--primary);flex-shrink:0;}
+
 /* WORK — case studies */
 .case{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;margin-bottom:70px;}
 .case:last-child{margin-bottom:0;}
@@ -431,4 +445,7 @@ footer .wrap{position:relative;z-index:1;}
   .contact-form{padding:24px;}
   .arch-head h3{font-size:21px;}
   .section-wave,.section-wave-standalone{height:34px;}
+  .compare-table{overflow-x:auto;}
+  .compare-row{grid-template-columns:160px 200px 220px;min-width:580px;}
+  .compare-cell{padding:14px 16px;font-size:13px;}
 }

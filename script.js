@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = 'hello@mhdsoft.com'; // TODO: replace with the real inbox
+const CONTACT_EMAIL = 'mhdglobalventures@gmail.com';
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
