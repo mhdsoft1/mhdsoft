@@ -11,6 +11,8 @@
 </head>
 <body>
 
+<div class="progress-bar" id="progressBar"></div>
+
 <header id="siteHeader">
   <div class="wrap">
     <nav>
@@ -43,26 +45,50 @@
 </header>
 
 <section class="hero" id="top">
+  <div class="aurora"></div>
+  <div class="grid-overlay"></div>
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
   <div class="wrap herogrid">
-    <div>
-      <div class="eyebrow">Software &bull; ERP &bull; AI &bull; Robotics</div>
-      <h1>Engineering the <span>future</span> of your business.</h1>
+    <div class="hero-copy">
+      <div class="eyebrow hero-eyebrow">
+        <span class="dot-pulse"></span>
+        <span id="typedWord">Software</span> firm building what's next
+      </div>
+      <h1>Engineering the <span class="grad-text">future</span> of your business.</h1>
       <p class="lead">MHD Soft builds ERP &amp; Odoo systems and custom software that fit the way you actually work, backed by a dedicated R&amp;D team pushing into AI automation, robotics, and IoT.</p>
       <div class="herobtns">
-        <a href="#contact" class="btn btn-primary">Start a project</a>
-        <a href="#work" class="btn btn-ghost">See our work</a>
+        <a href="#contact" class="btn btn-primary btn-glow"><span>Start a project</span></a>
+        <a href="#work" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          See our work
+        </a>
+      </div>
+      <div class="hero-trust">
+        <span>Building for</span>
+        <strong>ERP</strong><em>&bull;</em><strong>AI</strong><em>&bull;</em><strong>Robotics</strong><em>&bull;</em><strong>IoT</strong>
       </div>
     </div>
     <div class="heroart">
       <div class="heroring"></div>
+      <div class="hero-core">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="M3 17l9 5 9-5M3 12l9 5 9-5"/></svg>
+      </div>
       <div class="card-float card1"><b>ERP &amp; Odoo</b><span>Implementation</span></div>
       <div class="card-float card2"><b>AI &amp; Automation</b><span>R&amp;D driven</span></div>
       <div class="card-float card3"><b>IoT Systems</b><span>Smart integrations</span></div>
     </div>
   </div>
 </section>
+
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Odoo</span><span>ERP</span><span>Python</span><span>React</span><span>Node.js</span><span>Flutter</span>
+    <span>TensorFlow</span><span>Arduino</span><span>Raspberry Pi</span><span>MQTT</span><span>PostgreSQL</span><span>REST APIs</span>
+    <span>Odoo</span><span>ERP</span><span>Python</span><span>React</span><span>Node.js</span><span>Flutter</span>
+    <span>TensorFlow</span><span>Arduino</span><span>Raspberry Pi</span><span>MQTT</span><span>PostgreSQL</span><span>REST APIs</span>
+  </div>
+</div>
 
 <section id="services">
   <div class="wrap">
@@ -150,35 +176,55 @@
     <div class="sectionhead reveal">
       <div class="eyebrow">Recent work</div>
       <h2>Projects we've shipped</h2>
-      <p>A look at what we've built and delivered recently.</p>
+      <p>A closer look at what we've built and delivered recently.</p>
     </div>
-    <div class="work-grid">
 
-      <a href="https://play.google.com/store/apps/details?id=app.pathon.https" target="_blank" rel="noopener" class="work-card reveal">
-        <div class="work-thumb"><img src="pathon-banner.png" alt="Pathon app banner"></div>
-        <div class="work-body">
-          <div class="work-tag">Mobile App</div>
-          <h3>Pathon</h3>
-          <p>An online learning and knowledge exchange app connecting students with teachers for real-time problem solving, live classes, and video courses.</p>
-          <span class="work-link">View on Google Play
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
-          </span>
-        </div>
-      </a>
-
-      <a href="https://rayhan-khan.com" target="_blank" rel="noopener" class="work-card reveal">
-        <div class="work-thumb"><img src="rayhan-banner.png" alt="Rayhan Khan portfolio banner"></div>
-        <div class="work-body">
-          <div class="work-tag">Landing Page</div>
-          <h3>Rayhan Khan</h3>
-          <p>A personal portfolio and research website for a special educator and Ph.D. Presidential Fellow at Florida Atlantic University.</p>
-          <span class="work-link">Visit site
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
-          </span>
-        </div>
-      </a>
-
+    <div class="case reveal">
+      <div class="case-media">
+        <a href="https://play.google.com/store/apps/details?id=app.pathon.https" target="_blank" rel="noopener" class="case-thumb">
+          <img src="pathon-banner.png" alt="Pathon app banner">
+          <span class="case-hover"><span>Visit Google Play<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span></span>
+        </a>
+      </div>
+      <div class="case-body">
+        <div class="case-tags"><span class="work-tag">Mobile App</span><span class="case-role">Design + Development</span></div>
+        <h3>Pathon</h3>
+        <p>An online learning and knowledge exchange app connecting students directly with teachers, built around three core experiences.</p>
+        <ul class="case-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Real-time problem solving with live audio/video sessions</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Live online classes with screen sharing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Paid and free video course marketplace</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Student-set pricing with teacher negotiation</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=app.pathon.https" target="_blank" rel="noopener" class="work-link">View on Google Play
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
     </div>
+
+    <div class="case case-reverse reveal">
+      <div class="case-media">
+        <a href="https://rayhan-khan.com" target="_blank" rel="noopener" class="case-thumb">
+          <img src="rayhan-banner.png" alt="Rayhan Khan portfolio banner">
+          <span class="case-hover"><span>Visit site<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></span></span>
+        </a>
+      </div>
+      <div class="case-body">
+        <div class="case-tags"><span class="work-tag">Landing Page</span><span class="case-role">Design + Development</span></div>
+        <h3>Rayhan Khan</h3>
+        <p>A personal portfolio and research website for a special educator and Ph.D. Presidential Fellow at Florida Atlantic University.</p>
+        <ul class="case-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Research, teaching, and publications in one clean layout</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fully responsive across every device</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fast-loading static build, no CMS overhead</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Built to reflect an academic, credible tone</li>
+        </ul>
+        <a href="https://rayhan-khan.com" target="_blank" rel="noopener" class="work-link">Visit site
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -190,6 +236,7 @@
       <p>No black boxes. You know what stage your project is at, always.</p>
     </div>
     <div class="process-grid">
+      <div class="process-line"><div class="process-line-fill" id="processFill"></div></div>
       <div class="process-step reveal">
         <div class="step-num">1</div>
         <h4>Discover</h4>
@@ -220,7 +267,7 @@
       <h2>Ready to build something great?</h2>
       <p>Tell us what you're working on. Whether it's an ERP rollout, a new product, or an R&amp;D idea, we're ready to talk.</p>
       <div class="herobtns">
-        <a href="https://www.facebook.com/profile.php" target="_blank" rel="noopener" class="btn btn-light">Message us on Facebook</a>
+        <a href="https://www.facebook.com/profile.php" target="_blank" rel="noopener" class="btn btn-light btn-glow"><span>Message us on Facebook</span></a>
       </div>
     </div>
   </div>
@@ -268,6 +315,10 @@
     </div>
   </div>
 </footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
 
 <script src="script.js"></script>
 </body>
