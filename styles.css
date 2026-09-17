@@ -257,7 +257,7 @@ section{padding:110px 0;}
 .arch-head{text-align:center;max-width:520px;margin:0 auto 34px;}
 .arch-head h3{font-size:24px;font-weight:700;color:#fff;}
 .arch-head p{margin-top:10px;font-size:14.5px;color:#AEB8DA;}
-.arch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.arch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;}
 .arch-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:26px 24px;position:relative;transition:transform .3s ease, background .3s ease;}
 .arch-card:hover{transform:translateY(-6px);background:rgba(255,255,255,0.07);}
 .arch-card h4{font-size:17px;font-weight:600;color:#fff;margin-bottom:10px;}
